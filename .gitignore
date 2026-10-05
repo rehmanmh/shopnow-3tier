@@ -1,0 +1,35 @@
+# Node (backend)
+backend-node/node_modules/
+backend-node/.env
+*.log
+
+# Java (frontend)
+frontend-java/target/
+frontend-java/.mvn/
+frontend-java/*.iml
+.idea/
+*.class
+
+# OS
+.DS_Store
+
+# Secrets (any location)
+.env
+*.env
+!.env.example
+*.pem
+*.key
+kubeconfig*
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Terraform (later stages)
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# IDE / OS
+.vscode/
+Thumbs.db

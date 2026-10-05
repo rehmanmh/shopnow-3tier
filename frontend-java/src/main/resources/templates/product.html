@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title th:text="${product.name} + ' — ShopNow'">ShopNow</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<header class="topbar">
+    <div class="topbar-inner">
+        <a href="/" class="logo">Shop<span>Now</span></a>
+    </div>
+</header>
+
+<main class="container detail-container">
+    <a href="/" class="back-link">&larr; Back to products</a>
+    <div class="detail-card">
+        <img th:src="${product.image}" alt="" class="detail-image" />
+        <div class="detail-info">
+            <h1 th:text="${product.name}">Product name</h1>
+            <div class="product-rating" th:text="'★ ' + ${product.rating} + ' (' + ${product.reviews} + ' reviews)'">rating</div>
+            <div class="detail-price">
+                <span class="product-price" th:text="'₹' + ${product.price}">price</span>
+                <span class="product-mrp" th:text="'₹' + ${product.mrp}">mrp</span>
+            </div>
+            <p class="detail-description" th:text="${product.description}">description</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <p>ShopNow — 3-tier demo built for a real-time DevOps CI/CD project</p>
+</footer>
+</body>
+</html>
